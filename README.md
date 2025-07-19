@@ -13,6 +13,7 @@ git@github.com:sadslon/git-poetry-test.git
 
 ```commandline
 from datetime import datetime
+from masks import get_mask_card_number, get_mask_account
 ```
 
 3. Установите инструменты:

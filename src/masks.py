@@ -6,7 +6,7 @@ def get_mask_card_number(card_number: int) -> str:
     mask_number = f"{card_number_str[:4]} {card_number_str[4:6]} ** **** {card_number_str[12:]}"
     return mask_number
 
-
+# Проверка работы кода
 if __name__ == "__main__":
     print(get_mask_card_number(7000792289606361))
 
@@ -18,6 +18,6 @@ def get_mask_account(account_number: int) -> str:
     mask_account = f"**{account_number_str[-4:]}"
     return mask_account
 
-
+# Проверка работы кода
 if __name__ == "__main__":
     print(get_mask_account(73654108430135874305))

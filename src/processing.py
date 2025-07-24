@@ -43,13 +43,14 @@ if __name__ == "__main__":
     )
 
 
-def sort_by_date(data_list: list, data_key="date", descending=True) -> list:
-    """Функция которая должна возвращать новый список, отсортированный по дате (date)."""
-    return sorted(
-        data_list,
-        key=lambda x: datetime.strptime(x[data_key], "%Y-%m-%dT%H:%M:%S.%f"),
-        reverse=descending,
-    )
+def sort_by_date(data):
+    """Сортирует список словарей по дате в порядке возрастания."""
+
+    sorted_data = sorted(data, key=lambda x: x['date'])
+    # Преобразуем дату в строку формата 'YYYY-MM-DD'
+    for item in sorted_data:
+        item['date'] = item['date'].strftime('%Y-%m-%d')
+    return sorted_data
 
 
 # Проверка работы кода

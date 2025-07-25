@@ -13,13 +13,16 @@ git@github.com:sadslon/git-poetry-test.git
 
 ```commandline
 from datetime import datetime
-from masks import get_mask_card_number, get_mask_account
+import pytest
+from src.processing import filter_by_state, sort_by_date
+from src.widget import mask_account_card
+from src.masks import get_mask_card_number, get_mask_account
 ```
 
 3. Установите инструменты:
 
 ```commandline
-pip install flake8 mypy black
+pip install flake8 mypy black pytest
 ```
 
 ## Использование:
